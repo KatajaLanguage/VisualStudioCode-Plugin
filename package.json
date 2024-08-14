@@ -1,0 +1,25 @@
+{
+  "name": "kataja",
+  "displayName": "Kataja",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "kataja",
+      "aliases": ["Kataja", "kataja"],
+      "extensions": [".ktj"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "kataja",
+      "scopeName": "source.ktj",
+      "path": "./syntaxes/kataja.tmLanguage.json"
+    }]
+  }
+}
