@@ -9,17 +9,34 @@
   "categories": [
     "Programming Languages"
   ],
+  "icon": "resources/plugin-icon.png",
   "contributes": {
-    "languages": [{
-      "id": "kataja",
-      "aliases": ["Kataja", "kataja"],
-      "extensions": [".ktj"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "kataja",
-      "scopeName": "source.ktj",
-      "path": "./syntaxes/kataja.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "kataja",
+        "aliases": [
+          "Kataja",
+          "kataja"
+        ],
+        "extensions": [
+          ".ktj"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "kataja",
+        "scopeName": "source.ktj",
+        "path": "./syntaxes/kataja.tmLanguage.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "katajaIcon",
+        "label": "Kataja Icons",
+        "path": "./file-icons.json"
+      }
+    ]
   }
 }

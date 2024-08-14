@@ -1,0 +1,12 @@
+{
+    "iconDefinitions": {
+        "kataja-file-icon": {
+            "iconPath": "./resources/icons/KatajaFileIcon.png"
+        }
+    },
+    "fileExtensions": {
+        "ktj": "kataja-file-icon"
+    },
+    "fileNames": {},
+    "languageIds": {}
+}
