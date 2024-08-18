@@ -5,9 +5,8 @@
     { "include": "#comment" },
     { "include": "#string" },
     { "include": "#number" },
-    { "include": "#whitespace" },
-    { "include": "#identifier" },
-    { "include": "#operator" }
+    { "include": "#keywords" },
+    { "include": "#keychar" }
 	],
 	"repository": {
 		"comment": {
@@ -35,27 +34,17 @@
 				}
 			]
 		},
-		"whitespace": {
-			"patterns": [
-				{
-					"name": "kataja.whitespace",
-					"match": "[ \r\t\n]+"
-				}
-			]
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.kataja",
+				"match": "\\b(short|int|long|double|float|byte|char|void|if|while|else|return|true|false|null|this|main|class|interface|type|data|public|private|protected|static|synchronised|abstract|use|from|as|const|final|extends|throw|switch|default|for|in|break|try|catch|object|do|volatile|transient|strict|native)\\b"
+			}]
 		},
-		"identifier": {
+		"keychar": {
 			"patterns": [
 				{
-					"name": "kataja.identifier",
-					"match": "[a-zA-Z][a-zA-Z0-9_]*"
-				}
-			]
-		},
-		"operator": {
-			"patterns": [
-				{
-					"name": "kataja.operator",
-					"match": "[-+*/!=<>%&|^~]+"
+					"name": "keyword.control.kataja",
+					"match": "\\$"
 				}
 			]
 		}
