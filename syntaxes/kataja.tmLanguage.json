@@ -4,6 +4,7 @@
 	"patterns": [
     { "include": "#comment" },
     { "include": "#string" },
+	{ "include": "#char" },
     { "include": "#number" },
     { "include": "#keywords" },
     { "include": "#keychar" }
@@ -23,6 +24,14 @@
 					"name": "string.quoted.double.kataja",
 					"begin": "\"",
 					"end": "\""
+				}
+			]
+		},
+		"char": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.kataja",
+					"match": "'.'"
 				}
 			]
 		},
