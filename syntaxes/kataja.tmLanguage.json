@@ -2,28 +2,60 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Kataja",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+    { "include": "#comment" },
+    { "include": "#string" },
+    { "include": "#number" },
+    { "include": "#whitespace" },
+    { "include": "#identifier" },
+    { "include": "#operator" }
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.kataja",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.kataja",
-			"begin": "\"",
-			"end": "\"",
+		"comment": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.kataja",
-					"match": "\\\\."
+					"name": "comment.line.kataja",
+					"match": "#([^#\n]*)#?"
+				}
+			]
+		},
+		"string": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.kataja",
+					"begin": "\"",
+					"end": "\""
+				}
+			]
+		},
+		"number": {
+			"patterns": [
+				{
+					"name": "constant.numeric.kataja",
+					"match": "[0-9]+(\\.[0-9]+)?[idlfs]?"
+				}
+			]
+		},
+		"whitespace": {
+			"patterns": [
+				{
+					"name": "kataja.whitespace",
+					"match": "[ \r\t\n]+"
+				}
+			]
+		},
+		"identifier": {
+			"patterns": [
+				{
+					"name": "kataja.identifier",
+					"match": "[a-zA-Z][a-zA-Z0-9_]*"
+				}
+			]
+		},
+		"operator": {
+			"patterns": [
+				{
+					"name": "kataja.operator",
+					"match": "[-+*/!=<>%&|^~]+"
 				}
 			]
 		}
