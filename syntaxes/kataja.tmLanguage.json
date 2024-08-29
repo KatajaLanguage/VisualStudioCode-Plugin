@@ -14,7 +14,7 @@
 			"patterns": [
 				{
 					"name": "comment.line.kataja",
-					"match": "#([^#\n]*)#?"
+					"match": "#([^#\n]+)#?"
 				}
 			]
 		},
